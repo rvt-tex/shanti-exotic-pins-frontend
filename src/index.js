@@ -4,6 +4,12 @@ const ExoticsEndPoint = "http://localhost:3000/exotics"
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchExotics();
+
+    const createExoticform = document.querySelector("#new-exotic-form");
+
+    createExoticForm.addEventListener("submit", (event) =>
+    createExoticFormHandler(event));
+
 });
 
 function fetchExotics() {
@@ -25,6 +31,18 @@ function fetchExotics() {
     })
 }
 
-  
+function createExoticFormHandler(event) {
+    event.preventDefault();
+    const exoticBrandNameId = parseInt(document.querySelector('#brands-dropdown').value)
+    const exoticTitleInput = document.querySelector('#input-title').value
+    const exoticImageUrlInput = document.querySelector('#input-url').value
+    const exoticDescriptionInput = document.querySelector('#input-description').value
+
+    postFetch(exoticBrandNameId,exoticTitleInput, exoticImageUrlInput, xoticDescriptionInput);
+}
+
+function postFetch(brandId, title, image_url, description) {
+    console.log(brandId, title, image_url, description);
+}
  
   

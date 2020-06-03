@@ -7,10 +7,22 @@
 </head>
 <body>
     <main> 
+
+        
+
         <div class="form">
             <h3>Create an Exotic</h3>
+            <div id="brands-filter-drop-down" class="hidden">
+                <select id="brands-dropdown">
+                    <option value="" disabled selected>Select your Exotic Brand...</option>
+                    <option value="1">Aston_Martin</option>
+                    <option value="2">Ferrari</option>
+                    <option value="3">Bugatti</option>
+                    <option value="4">Masserati</option>
+                    <option value="5">Lamborghini</option>
+                </select> <br><br>
+            </div>
             <form id="new-exotic-form" class="hidden">
-                <input id='input-name' type="text" name="name" value="" placeholder="Enter your exotic brand name " class="input-text"><br><br>
                 <input id='input-title' type="text" name="title" value="" placeholder="Enter your exotic title" class="input-text"><br><br>
                 <input id='input-url' type="text" name="image_url" value="" placeholder="Enter your exotic image URL..." class="input-text"><br><br>
                 <textarea id='input-description' name="description" rows="8" cols="80" value="" placeholder="Enter your description..."></textarea>
